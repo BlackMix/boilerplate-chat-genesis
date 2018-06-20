@@ -61,25 +61,25 @@ const actions = {
 }
 
 const mutations = {
-  [USERS] ({commit}, obj) {
+  [USERS] (state, obj) {
     state.users = obj
   },
-  [STATUS] ({commit}, obj) {
+  [STATUS] (state, obj) {
     state.status = obj
   },
-  [USERS_STATUS] ({commit}, obj) {
+  [USERS_STATUS] (state, obj) {
     state.users.filter(x => x.id === obj.user_id ? (x.status = obj.status) : undefined)
   },
-  [TYPING] ({commit}, obj) {
+  [TYPING] (state, obj) {
     state.typing = obj
   },
-  [USERS_TYPING] ({commit}, obj) {
+  [USERS_TYPING] (state, obj) {
     state.users.filter(x => x.id === obj.user_id ? (x.isTyping = obj.isTyping) : undefined)
   },
-  [MESSAGES] ({commit}, obj) {
+  [MESSAGES] (state, obj) {
     state.messages = obj
   },
-  [CHANNEL] ({commit}, obj) {
+  [CHANNEL] (state, obj) {
     state.channel = obj
   }
 }
